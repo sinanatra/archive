@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Are from Earth</title>
+  <script src="static/vendor/jquery-1.12.4.js"></script>
+  <script type="text/javascript" src="static/index.js"></script>
+  <link rel="shortcut icon" href="static/favicon.ico">
+  <link rel="stylesheet" href="static/reset.css" />
+  <link rel="stylesheet" href="static/index.css" />
+
+  <script type="text/javascript">
+    function htmlToText(elem) {
+      var outText = "";
+      for (var x = 0; x < elem.childNodes.length; x++) {
+        if (elem.childNodes[x].data) {
+          outText += elem.childNodes[x].data;
+        } else {
+          outText += "\n";
+        }
+      }
+      return (outText);
+    }
+  </script>
+</head>
+
+<body class="grey">
+  <button id="parse" style="display: none;"> Analyse your text </button>
+
+  <header>
+    <a class="index" id="elem1" href="index.html">Learning from Google</a><a class="index" id="elem2"
+      href="database.html">Learning from your text</a><a class="index" id="elem3" href="about.html">Info</a>
+  </header>
+
+  <section class="intro">
+    <h2>Ai are from Earth too.</h2>
+    <p>
+      Everyone in this section can add text to the website.
+      These contents can be used as an alternative dataset to the one created by Google, leaving the
+      ownership to users: anyone can decide what to teach and to remove to this machine.
+    </p>
+    <br>
+    <p>
+      Download the current <a href="static/model.pkl" download>model</a>.
+    </p>
+  </section>
+  <section class="container" id="database-container">
+    <div class="explaination-container">
+      <button class="explain" id="write"> Write some text to upload</button>
+      <button id="upload" class="togglelist" onmousedown="loader()"> Upload it and read </button>
+    </div>
+    <div class="write">
+      <div id="input" contenteditable="true"></div>
+    </div>
+    <div class="data-container" style="color: black;">
+      
+      <a href="database/data_1616843399.295445.txt">
+        <div class="json-database cluster-1">
+          I got my peaches out in Georgia (Oh, yeah, shit)
+I get my weed from California (That&#39;s that shit)
+I took my chick up to the North, yeah (Bad-ass bitch)
+I get my light right from the source, yeah...
+        </div>
+      </a>
+      
+      <a href="database/data_1616836861.389934.txt">
+        <div class="json-database cluster-1">
+          And another crucial conflict looms this fall: the fights over redistricting to account for growing and changing populations, and the gerrymandering that will allow partisan majorities to limit the...
+        </div>
+      </a>
+      
+      <a href="database/data_1616835290.942369.txt">
+        <div class="json-database cluster-1">
+          You do not do, you do not do
+Any more, black shoe
+In which I have lived like a foot
+For thirty years, poor and white,
+Barely daring to breathe or Achoo.
+Daddy, I have had to kill you.
+You died...
+        </div>
+      </a>
+      
+      <a href="database/data_1616836738.517673.txt">
+        <div class="json-database cluster-1">
+          The fight over voting rights is emerging as one of the defining conflicts of the Biden era, and Georgia fired the opening shot with a set of new restrictions underscoring the political, legal and...
+        </div>
+      </a>
+      
+    </div>
+    </div>
+  </section>
+</body>
+<script>
+  function loader() {
+    $('.write').toggle();
+    $('.analysis').toggle();
+  }
+  
+  $("#write").click(function () {
+    $('.write').toggle();
+    $('.analysis').toggle();
+    $('#hescore').html('');
+    $('#shescore').html('');
+  });
+
+  document.querySelector("div[contenteditable]").addEventListener("paste", function (e) {
+    e.preventDefault();
+    var text = e.clipboardData.getData("text/plain");
+    document.execCommand("insertText", false, text);
+  });
+</script>
+
+</html>

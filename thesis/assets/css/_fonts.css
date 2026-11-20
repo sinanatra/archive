@@ -1,0 +1,58 @@
+@font-face {
+  font-family: 'Burgess';
+  src: url('https://thesis.giacomonanni.info/assets/fonts/Burgess-RegularItalic.woff2') format('woff2'),
+      url('../fonts/Burgess-RegularItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Burgess';
+  src: url('../fonts/Burgess-Regular.woff2') format('woff2'),
+      url('https://thesis.giacomonanni.info/assets/fonts/Burgess-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Gt Pressura';
+  src: url('https://thesis.giacomonanni.info/assets/fonts/gt-pressura-mono-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gt Pressura';
+  src:       url('https://thesis.giacomonanni.info/assets/fonts/gt-pressura-mono-regular-italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Fk Grotesk';
+  src:       url('../fonts/Fk%20Grotesk%20mono.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Fk Grotesk';
+  src:       url('../fonts/Fk%20Grotesk%20italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'FF Dingbats Flower';
+  src:       url('../fonts/FF%20Dingbats_Stars%20and%20Flowers.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'FF Dingbats Office';
+  src:       url('../fonts/FF%20Dingbats_Office.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+

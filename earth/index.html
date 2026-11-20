@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Are from Earth</title>
+    <script src="static/vendor/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="static/index.js"></script>
+    <link rel="shortcut icon" href="static/favicon.ico">
+    <link rel="stylesheet" href="static/reset.css" />
+    <link rel="stylesheet" href="static/index.css" />
+</head>
+
+<body>
+    <div style="background-color: #FFFF00; padding: 5px">
+        This project resulted from research conducted under the supervision of Anja Groten in the master department Information Design at Design Academy Eindhoven (NL), 2018.
+        <br>Due to server limitations, only the static version of the site is shown here, more information at: 
+        <a href="https://github.com/sinanatra/are-from-earth">@are-from-earth</a>
+    </div>
+    <button id="upload" style="display: none;">Analyse your text </button>
+    <header>
+        <a class="index" id="elem1" href="index.html">Learning from Google</a><a class="index" id="elem2" href="database.html">Learning from your text</a><a class="index" id="elem3" href="https://earth.giacomonanni.info/about">Info</a>
+    </header>
+
+    <section class="intro">
+        <h2>Men are from Earth, Women are from Earth, and Ai are from Earth too.</h2>
+        <p>
+            The disproportionate often irresponsive use of Machine learning Algorithms risks to emphasise stereotypes
+            already present in data. Whenever data reflects biases of the broader society, the learning algorithm
+            captures and learns from these stereotypes.
+        </p>
+        <br>
+        <p>
+            On this website we visualise how <em>text embeddings</em> trained on <em>Google News</em> represent gender.
+        </p>
+    </section>
+    <section class="container">
+        <div class="explaination-container">
+            <button class="explain" id="write"> Start by writing something</button>
+            <button id="parse" onmousedown="loader()"> Analyse your text </button>
+        </div>
+        <div class="write">
+            <div id="input" contenteditable="true">
+                <p>She is an engineer, while he is a nurse.</p>
+            </div>
+        </div>
+        <div class="analysis">
+            <div class="explaination-container">
+                <p>Here you can see what gender connections the algorithm does.</p><br><p>In green words which are considered to be </p> <p class="female">female</p><p>, in purple </p> <p class="male">male</p><p>.</p>
+            </div>
+            <div class="texteditor">
+                <div id="output">
+                </div>
+                <p id="shescore" class="she123"></p>
+                <p id="hescore" class="he123"></p>
+            </div>
+        </div>
+    </section>
+</body>
+<script>
+    function loader() {
+        $('#output').html('<p id="throbber"><span>.</span><span>.</span><span>.</span></p>');
+        $('.write').toggle();
+        $('.analysis').toggle();
+    }
+
+    $("#write").click(function () {
+        $('.write').toggle();
+        $('.analysis').toggle();
+        $('#hescore').html('');
+        $('#shescore').html('');
+    });
+
+    document.querySelector("div[contenteditable]").addEventListener("paste", function (e) {
+        e.preventDefault();
+        var text = e.clipboardData.getData("text/plain");
+        document.execCommand("insertText", false, text);
+    });
+</script>
+
+</html>
