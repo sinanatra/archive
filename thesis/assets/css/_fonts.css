@@ -1,33 +1,17 @@
 @font-face {
   font-family: 'Burgess';
-  src: url('https://thesis.giacomonanni.info/assets/fonts/Burgess-RegularItalic.woff2') format('woff2'),
-      url('../fonts/Burgess-RegularItalic.woff') format('woff');
+  src: url('../fonts/Burgess-RegularItalic.woff') format('woff');
   font-weight: normal;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Burgess';
-  src: url('../fonts/Burgess-Regular.woff2') format('woff2'),
-      url('https://thesis.giacomonanni.info/assets/fonts/Burgess-Regular.woff') format('woff');
+  src: url('../fonts/Burgess-Regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
 
-
-@font-face {
-  font-family: 'Gt Pressura';
-  src: url('https://thesis.giacomonanni.info/assets/fonts/gt-pressura-mono-regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Gt Pressura';
-  src:       url('https://thesis.giacomonanni.info/assets/fonts/gt-pressura-mono-regular-italic.woff') format('woff');
-  font-weight: normal;
-  font-style: italic;
-}
 
 @font-face {
   font-family: 'Fk Grotesk';
