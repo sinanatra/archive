@@ -15,21 +15,26 @@ body,html{
 }
 
 header {
+  display: flex;
+  align-items: stretch;
   height: 36px;
   background: var(--dark-background-2);
 }
 
 header a, .data-container a {
-  vertical-align: -webkit-baseline-middle;
   color: black;
   text-decoration: none;
 }
 
+header a {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  height: 100%;
+}
+
 header #elem1 {
-  vertical-align: -webkit-baseline-middle;
   background-color: var(--clear-background);
-  text-decoration: none;
-  padding: 10px;
 }
 
 header #elem2 {
@@ -330,11 +335,11 @@ a {
 
 @media screen and (max-width: 640px){
   header{
+    flex-direction: column;
     height: auto;
   }
   header a{
-    display: block;
-    min-height: 36px;
-    width: 100vw;
+    height: 36px;
+    width: 100%;
   }
 }
