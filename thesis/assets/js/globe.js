@@ -250,7 +250,7 @@ $(document).ready(function () {
 // function initialize() {
 //     earth = new WE.map('earthMap');
 //     earth.setView([46.8011, 8.2266], 1);
-//     WE.tileLayer('https://api.mapbox.com/styles/v1/sinanatra/cjserw8062fm51gqi09wbpx5c/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoic2luYW5hdHJhIiwiYSI6ImNpcTloaTlocjAwNWFodm0yODJjODF5MXYifQ.urgyj3bpfbG3dX4uTOOZtQ', {
+//     WE.tileLayer('https://api.mapbox.com/styles/v1/sinanatra/cjserw8062fm51gqi09wbpx5c/tiles/256/{z}/{x}/{y}?access_token=REMOVED', {
 //         attribution: '© OpenStreetMap contributors'
 //     }).addTo(earth);
 
